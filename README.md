@@ -1,3 +1,3 @@
 # Guía 10. Algoritmos recursivos e iterativos
 
-[Enunciado](https://docs.google.com/document/d/1Hl2BlAlBp7RhkLhxuO_A7pP-mIYJlZvs/preview)
+[Enunciado](https://docs.google.com/document/d/1dS7o9Y6ykY80xyRmsu6H9BpkM4Eb4lXG/preview)
