@@ -3,17 +3,15 @@ namespace Ejercicio3.Models
 {
     internal class Servicio
     {
-        public int CantidadEncuestados;
-
         int[] tiposTransportes = new int[100];
         double[] distancias = new double[100];
-        int contadorEncuestados;
+        public int CantidadEncuestados;
 
         public void RegistrarEncuesta(int tipoTransporte, double distancia)
         {
             tiposTransportes[CantidadEncuestados] = tipoTransporte;
             distancias[CantidadEncuestados] = distancia;
-            contadorEncuestados++;            
+            CantidadEncuestados++;            
         }
 
         public double CalcularPromedioPorTipo(int tipoTransporte)
@@ -22,7 +20,7 @@ namespace Ejercicio3.Models
 
             int contador=0;
             double acumulador=0;
-            for(int n=0; n<contadorEncuestados; n++)
+            for(int n=0; n< CantidadEncuestados; n++)
             {
                 if (tiposTransportes[n] == tipoTransporte)
                 {

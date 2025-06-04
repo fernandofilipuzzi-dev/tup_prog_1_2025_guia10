@@ -11,12 +11,15 @@ namespace Ejercicio3
         static int MostrarPantallaSolicitarOpcionMenu()
         {
             Console.Clear();
-            Console.WriteLine("Ingrese las siguiente opciones:");
-            Console.WriteLine("1- Registrar encuesta");
-            Console.WriteLine("2- Registrar una cantidad de encuestas");
-            Console.WriteLine("3- Mostrar pocentajes de distancia por tipo de transporte.");
-            Console.WriteLine("4- Mostrar cantidad de encuestados.");
-            Console.WriteLine("(otro)- Salir.");
+
+            Console.WriteLine(@"Ingrese las siguiente opciones:
+
+1- Registrar encuesta
+2- Registrar una cantidad de encuestas
+3- Mostrar promedios de distancias recorridas por tipo de vehículo.
+4- Mostrar cantidad de encuestados.
+(otro)- Salir.");
+
             int op = Convert.ToInt32(Console.ReadLine());
             return op;
         }
@@ -28,10 +31,10 @@ namespace Ejercicio3
 
             Console.Clear();
 
-            Console.WriteLine("Tipo de vehículo");
+            Console.WriteLine("Tipo de vehículo (1- bici, 2-motocicleta, 3- automóvil, 4-transporte público.)");
             tipoVehiculo = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Distancia recorrida");
+            Console.WriteLine("Distancia recorrida (km)");
             distancia = Convert.ToDouble(Console.ReadLine());
 
             servicio.RegistrarEncuesta(tipoVehiculo, distancia);
@@ -61,19 +64,16 @@ namespace Ejercicio3
 
         static void MostrarPantallaPromediosResultados()
         {
-            int tipoVehiculo;
-            double distancia;
-
             Console.Clear();
 
-            Console.WriteLine("Promedio de distancia recorrida por tipo de vehículo");
+            Console.WriteLine($@"Promedio de distancia recorrida por tipo de vehículo
 
-            Console.WriteLine("Bicicleta:" + servicio.CalcularPromedioPorTipo(1).ToString("0.00"));
-            Console.WriteLine("Motocicleta:" + servicio.CalcularPromedioPorTipo(2).ToString("0.00"));
-            Console.WriteLine("Automóvil:" + servicio.CalcularPromedioPorTipo(3).ToString("0.00"));
-            Console.WriteLine("Transporte público:" + servicio.CalcularPromedioPorTipo(4).ToString("0.00"));
+  Bicicleta: {servicio.CalcularPromedioPorTipo(1):f2}
+  Motocicleta: {servicio.CalcularPromedioPorTipo(2):f2}
+  Automóvil:  {servicio.CalcularPromedioPorTipo(3):f2}
+  Transporte público: {servicio.CalcularPromedioPorTipo(4):f2}
 
-            Console.WriteLine("\n\nPresione una tecla para continuar.");
+  Presione una tecla para continuar.");
             Console.ReadKey();
         }
 
@@ -81,9 +81,8 @@ namespace Ejercicio3
         {
             Console.Clear();
 
-            Console.WriteLine("Total de encuestados:");
-
-            Console.WriteLine(servicio.CantidadEncuestados);
+            Console.WriteLine($@"Total de encuestados:
+{servicio.CantidadEncuestados}");
 
             Console.WriteLine("\n\nPresione una tecla para continuar.");
             Console.ReadKey();
