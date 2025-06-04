@@ -57,10 +57,11 @@
 <XPD:OBJ name="OwnedViews[0]" type="UMLClassView" guid="R+9qe2/9OEGttpFxWFqfWQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">308</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">104</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">296</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">152</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">292</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">186</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">117</XPD:ATTR>
+<XPD:ATTR name="ShowProperty" type="boolean">True</XPD:ATTR>
 <XPD:REF name="Model">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="JzHMEhsEEUu3KN6O0mmY2gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="HEpwiMvfV0Kqov2KxJWgSAAA">
@@ -160,59 +161,23 @@
 </XPD:OBJ>
 <XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
 <XPD:REF name="TypedFeatures[0]">cadBrfWwM0qLeXMK6GrE1QAA</XPD:REF>
-<XPD:ATTR name="#Attributes" type="integer">9</XPD:ATTR>
+<XPD:ATTR name="#Attributes" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="naLARuBp80q/n+2gaqJlFwAA">
-<XPD:ATTR name="Name" type="string">CantidadEncuestados</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">tiposTransportes</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int[]</XPD:ATTR>
 <XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="tb70BCrnmUKhrGcLBcG46QAA">
-<XPD:ATTR name="Name" type="string">contadorBici</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">distancias</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">double[]</XPD:ATTR>
 <XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="hAMiPVJn9UWEbjEvPF6UlQAA">
-<XPD:ATTR name="Name" type="string">contadorMoto</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">contadorEncuestados</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
-<XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="xP8S8/lhlEiYu70BS1ZPCQAA">
-<XPD:ATTR name="Name" type="string">contadorAuto</XPD:ATTR>
-<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
-<XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Attributes[4]" type="UMLAttribute" guid="iOwOfs56K0+areg33LCFSgAA">
-<XPD:ATTR name="Name" type="string">contadorPublico</XPD:ATTR>
-<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
-<XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Attributes[5]" type="UMLAttribute" guid="JJkq3dXs7U69Pe+uxdWKugAA">
-<XPD:ATTR name="Name" type="string">acumuladorDistanciaBici</XPD:ATTR>
-<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
-<XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Attributes[6]" type="UMLAttribute" guid="/WdpmU3Cj0+HQzr0d+ZhBwAA">
-<XPD:ATTR name="Name" type="string">acumuladorDistanciaMoto</XPD:ATTR>
-<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
-<XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Attributes[7]" type="UMLAttribute" guid="m4Ufe1CoF0Gq2aQ4T4s2cQAA">
-<XPD:ATTR name="Name" type="string">acumularoDistanciaAuto</XPD:ATTR>
-<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
-<XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Attributes[8]" type="UMLAttribute" guid="SYXuV7BDC06pM+AjjvcmrwAA">
-<XPD:ATTR name="Name" type="string">acumuladorDistanciaPublico</XPD:ATTR>
-<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">double</XPD:ATTR>
 <XPD:REF name="Owner">LGCPRnKGfkaVD8ArQ8PZtgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
