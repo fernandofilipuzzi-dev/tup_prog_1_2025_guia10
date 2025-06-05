@@ -140,7 +140,7 @@ Presione una tecla para volver al menú principal");
 
             for (int n = 0; n < cantidad; n++)
             {
-                Console.Write($"{servicio.Lista[n],4}");
+                Console.Write($"{lista[n],4}");
             }
 
             Console.WriteLine("\n\nPresione una tecla para volver al menú principal");

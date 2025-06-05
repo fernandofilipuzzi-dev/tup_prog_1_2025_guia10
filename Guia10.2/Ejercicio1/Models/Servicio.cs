@@ -108,13 +108,7 @@ namespace Ejercicio1.Models
                     contadorSuperiores++;
                 }
             }
-
-            int[] resultado = new int[contadorSuperiores];
-            for (int i = 0; i < contadorSuperiores; i++)
-            {
-                resultado[i] = superiores[i];
-            }
-            return resultado;
+            return superiores;
         }
     }
 }
