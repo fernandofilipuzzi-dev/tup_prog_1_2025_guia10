@@ -3,52 +3,58 @@ namespace Ejercicio4.Models
 {
     internal class Servicio
     {
-        public double Caja;
+        int[] CantidadesPorRubro=new int[5];
+        public double[] MontosPorRubro=new double[5];
+        
+        public int NumeroTransaccionMayor;
+        public double MontoTransaccionMayor;
 
-        public void RegistrarAcceso(bool esTicketValido, int tipoVehiculo, int cantidadTipo, int numerosDias)
+        int contadorDeTransacciones;
+
+        public Servicio()
         {
-            if (esTicketValido == false)
-            { 
-                double valorBase = DeterminarValorVehiculo(tipoVehiculo);
-                double valorBaseTotal = cantidadTipo * valorBase;
-                double valorDiasTotal = valorBaseTotal * DeterminarPorcentaje(numerosDias);
-                double valorIva = valorDiasTotal * 21 / 100;
-                double subTotalConIva = valorDiasTotal + valorIva;
-                double eco = subTotalConIva * 15 / 100;
-                double monto = subTotalConIva + eco;
-
-                Caja += monto;
-            }
-        }
-
-        double DeterminarValorVehiculo(int tipo)
-        {
-            double valor = 0;
-            switch (tipo)
+            for (int n = 0; n < 5; n++)
             {
-                case 1: valor = 100; break;
-                case 2: valor = 800; break;
-                case 3: valor = 1000; break;
-                case 4: valor = 1500; break;
-                case 5: valor = 5000; break;
-                case 6: valor = 1200; break;
+                CantidadesPorRubro[n] = 0;
+                MontosPorRubro[n] = 0;
             }
-            return valor;
         }
 
-        double DeterminarPorcentaje(int dias)
+        public void EvaluarTransaccionPuntoDeVenta(int nroTransaccion, int rubro, int cantidad, double monto)
         {
-            if (dias == 1)
-                return 100;
-            else if (dias == 2)
-                return 120;
-            else if (dias == 3)
-                return 220;
-            else if (dias == 4)
-                return 380;
-            else if (dias >= 5 && dias <= 10)
-                return 380;
-            return 0;
+            CantidadesPorRubro[rubro - 1] += cantidad;
+            MontosPorRubro[rubro - 1] += monto;
+            
+            if (contadorDeTransacciones == 0 || monto > MontoTransaccionMayor)
+            {
+                NumeroTransaccionMayor = nroTransaccion;
+                MontoTransaccionMayor = monto;
+            }
+            contadorDeTransacciones++;
+        }
+        public double[] CalcularPorcentajesCantidadVentasPorRubro()
+        {
+            double[] porcentajes = new double[5];
+            for(int n=0; n<5; n++)
+            {
+                double porcentaje = 0;
+                if (CantidadesPorRubro[n] > 0)
+                {
+                    porcentajes[n] = (CantidadesPorRubro[n] * 100) / contadorDeTransacciones;    
+                }
+                porcentajes[n] = porcentaje;
+            }
+            return porcentajes;
+        }
+        
+        public double CalcularRecaudacionTotal()
+        {
+            double total = 0;
+            for (int n = 0; n < 5; n++)
+            {
+                total += MontosPorRubro[n];
+            }
+            return total;
         }
     }
 }

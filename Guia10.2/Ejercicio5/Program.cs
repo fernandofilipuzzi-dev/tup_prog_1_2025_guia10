@@ -1,88 +1,83 @@
-﻿using Ejercicio4.Models;
+﻿using Ejercicio5.Models;
 
-namespace Ejercicio4
+namespace Ejercicio5
 {
     internal class Program
     {
-        static Servicio servicio = new Servicio();
+        static Juego juego;
+        static int[] partidasGanadas = new int[10];
 
         #region metodos de impresión de pantallas
         static int MostrarPantallaSolicitarOpcionMenu()
         {
             Console.Clear();
-            Console.WriteLine("Ingrese las siguiente opciones:\n\n");
-            Console.WriteLine("1- Ingresar un resumen de venta");
-            Console.WriteLine("2- Mostrar Número de transacción registrado con el mayor monto total");
-            Console.WriteLine("3- Mostrar Porcentaje de recaudación por rubro");
-            Console.WriteLine("4- Mostrar recaudación por rubro y recaudación total");
-            Console.WriteLine("(otro)- Salir.");
+            Console.WriteLine(@"Ingrese las siguiente opciones:
+1- Iniciar Juego nuevo
+2- Mostrar Estadistica Juego
+(otro)- Salir.");
 
             int op = Convert.ToInt32(Console.ReadLine());
             return op;
         }
-        static void MostrarPantallaRegistrarTransaccion()
+
+        static void MostrarPantallaJuegoNuevo()
         {
             Console.Clear();
-            Console.WriteLine("Registre la transacción de venta. \n\n");
+            Console.WriteLine("En juego!!!!:\n\n");
 
-            Console.WriteLine("\nNumero de transacción: \n");
-            int nro = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ingrese la cantidad de jugadores:");
+            int cantidadJugadores = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("\n\n\nNumero de rubro (de 1 a 5): \n");
-            int rubro = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("\n\n\nCantidad de productos: \n");
-            int cantidad = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("\n\n\nMonto total de la transacción: \n");
-            double monto = Convert.ToDouble(Console.ReadLine());
-
-            servicio.EvaluarTransaccionPuntoDeVenta(nro, rubro, cantidad, monto);
-
-            Console.WriteLine("\n\n\n\n\nPresione una tecla para continuar");
-            Console.ReadKey();
-        }
-        static void MostrarPantallaTransaccionMayorMonto()
-        {
-            Console.Clear();
-            Console.WriteLine("Transacción con mayor monto en ventas\n\n");
-
-            Console.WriteLine($"Número de transacción: {servicio.NumeroTransaccionMayor}\n");
-            Console.WriteLine($"Monto Total: ${servicio.MontoTransaccionMayor:f2}\n\n\n");
-
-            Console.WriteLine("\n\n\nPresione una tecla para continuar");
-            Console.ReadKey();
-        }
-        static void MostrarPantallaPorcentajeDeCantidadesPorRubro()
-        {
-            Console.Clear();
-            Console.WriteLine("\n\t\tPorcentaje de ventas por rubo \n\n");
-
-            double[] porcentajes=servicio.CalcularPorcentajesCantidadVentasPorRubro();
-            Console.WriteLine($"Rubro 1: {porcentajes[0]:f2}%\n");
-            Console.WriteLine($"Rubro 2: {porcentajes[1]:f2}%\n");
-            Console.WriteLine($"Rubro 3: {porcentajes[2]:f2}%\n");
-            Console.WriteLine($"Rubro 4: {porcentajes[3]:f2}%\n");
-            Console.WriteLine($"Rubro 5: {porcentajes[4]:f2}%\n\n\n\n");
-
-            Console.WriteLine("\n\n\nPresione una tecla para continuar");
-            Console.ReadKey();
-        }
-        static void MostrarPantallaResumenRecaudaciones()
-        {
-            Console.Clear();
-            Console.WriteLine("Recaudaciones \n\n");
-
-
-            Console.WriteLine($"\n\nRecaudacion total: ${servicio.CalcularRecaudacionTotal():f2}\n\n\n");
-            for (int n = 0; n < 5; n++)
+            juego = new Juego(cantidadJugadores);
+            ConsoleKeyInfo key;
+            do
             {
-                Console.WriteLine($"Recaudacion Rubro {n+1}: ${servicio.MontosPorRubro[0]:f2}\n\n\n");
+                Console.WriteLine("Presione cualquier tecla para continuar (Escape para interrumpir el juego)\n\n");
+                key = Console.ReadKey();
+
+                juego.Jugar();
+
+                for (int n = 0; n<juego.PosicionJugadores.Length; n++)
+                {
+                    Console.WriteLine($"Jugador {n + 1} está en la posición {juego.PosicionJugadores[n]}");
+                }
+            }
+            while (key.Key != ConsoleKey.Escape && juego.Finalizado==false);
+
+            if (key.Key != ConsoleKey.Escape)
+            {
+                if (juego.IdxGanador > -1)
+                {
+                    partidasGanadas[juego.IdxGanador]++;
+
+                    Console.WriteLine($"Ganador: Jugador número {juego.IdxGanador+1}");
+                }
+                else
+                {
+                    Console.WriteLine("No hay ganador, el juego terminó sin que nadie llegue a la meta.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Juego interrumpido");
             }
 
-            Console.WriteLine($"\n\nRecaudacion total: ${servicio.CalcularRecaudacionTotal():f2}\n\n\n");
+            Console.WriteLine("\n\n\nPresione una tecla para volver al menú principal.");
+            Console.ReadKey();
+        }
 
-            Console.WriteLine("\n\n\nPresione una tecla para continuar");
+        static void MostrarPantallaEstadisticaJuego()
+        {
+            Console.Clear();
+            Console.WriteLine("En juego!!!!:\n\n");
+
+            Console.WriteLine($"{"nro jugador",15}|{"partidasGanadas",8}");
+            for (int n = 0; n < partidasGanadas.Length; n++)
+            {
+                Console.WriteLine($"{partidasGanadas[n],15}|{partidasGanadas[n],8}");
+            }
+            
+            Console.WriteLine("\n\n\nPresione una tecla para volver al menú principal.");
             Console.ReadKey();
         }
 
@@ -90,8 +85,6 @@ namespace Ejercicio4
 
         static void Main(string[] args)
         {
-            servicio= new Servicio();
-
             int op = MostrarPantallaSolicitarOpcionMenu();
 
             #region iterar opciones menú
@@ -101,17 +94,10 @@ namespace Ejercicio4
                 switch (op)
                 {
                     case 1:
-                        MostrarPantallaRegistrarTransaccion();
+                        MostrarPantallaJuegoNuevo();
                         break;
                     case 2:
-                        MostrarPantallaTransaccionMayorMonto();
-                        break;
-                    case 3:
-                        MostrarPantallaPorcentajeDeCantidadesPorRubro();
-                        break;
-                    case 4:
-                        MostrarPantallaResumenRecaudaciones();
-                        break;
+                        MostrarPantallaEstadisticaJuego();
                         break;
                     default:
                         op = -1;

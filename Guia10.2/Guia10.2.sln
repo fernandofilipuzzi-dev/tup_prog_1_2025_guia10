@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio2_Indice_compartid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3_Encuesta_Transporte", "Ejercicio3\Ejercicio3_Encuesta_Transporte.csproj", "{12FF6B91-99E4-4382-B743-5540241943EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio4_Rubros", "Ejercicio5\Ejercicio4_Rubros.csproj", "{0B4FB441-6D9F-4FAC-BD48-8DE891B7633A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio4_Rubros", "Ejercicio4\Ejercicio4_Rubros.csproj", "{0B4FB441-6D9F-4FAC-BD48-8DE891B7633A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio5_Escaleras_serpientes", "Ejercicio6\Ejercicio5_Escaleras_serpientes.csproj", "{203AFED7-550C-4901-A39B-DD68407C3580}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio5_Escaleras_serpientes", "Ejercicio5\Ejercicio5_Escaleras_serpientes.csproj", "{203AFED7-550C-4901-A39B-DD68407C3580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
