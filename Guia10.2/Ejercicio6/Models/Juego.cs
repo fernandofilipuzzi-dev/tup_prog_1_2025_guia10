@@ -9,7 +9,9 @@ namespace Ejercicio6.Models
         int[,] PosicionesEscaleras;
         int[,] PosicionesSerpientes;
 
-        public int idxGanador = -1;
+        public int IdxGanador = -1;
+
+        public bool Finalizado = false;
 
 
         public Juego(int cantJugadores)
@@ -22,7 +24,7 @@ namespace Ejercicio6.Models
 
             int cantidadSerpientes = azar.Next(2, 5);
             PosicionesSerpientes = new int[cantidadSerpientes, 2];
-            for (int n = 0; n < PosicionesSerpientes.Length; n++)
+            for (int n = 0; n < cantidadSerpientes; n++)
             {
                 int cola = azar.Next(1,101);
                 int cabeza = azar.Next(cola, 101);
@@ -32,7 +34,7 @@ namespace Ejercicio6.Models
 
             int cantidadEscaleras = azar.Next(2, 5);
             PosicionesEscaleras = new int[cantidadEscaleras, 2];
-            for (int n = 0; n < PosicionesEscaleras.Length; n++)
+            for (int n = 0; n < cantidadEscaleras; n++)
             {
                 int pie = azar.Next(1, 101);
                 int cabezal = azar.Next(pie, 101);
@@ -43,12 +45,19 @@ namespace Ejercicio6.Models
 
         public void Jugar()
         {
-            for (int n = 0; n<+PosicionJugadores.Length; n++)
+            if (Finalizado == false)
             {
-                PosicionJugadores[n] += azar.Next(1, 7);
+                for (int n = 0; n < +PosicionJugadores.Length; n++)
+                {
+                    PosicionJugadores[n] += azar.Next(1, 7);
 
-                EvaluarSerpientes();
-                EvaluarEscaleras();
+                    EvaluarSerpientes();
+                    EvaluarEscaleras();
+                }
+
+                EvaluarFinJuego();
+
+                EvaluarGanador();
             }
         }
 
@@ -78,6 +87,37 @@ namespace Ejercicio6.Models
                     }
                 }
             }
+        }
+
+        private void EvaluarFinJuego()
+        {
+            Finalizado |= false;
+            int n = 0;
+            while (Finalizado == false && n < PosicionJugadores.Length)
+            {
+                Finalizado |= PosicionJugadores[n] >= 100;
+                n++;
+            }
+        }
+
+        private void EvaluarGanador()
+        {
+            int idxGanador = 0;
+
+            int llegaron = 0;
+            int n = 0;
+            while ( n < PosicionJugadores.Length)
+            {
+                if (PosicionJugadores[n] >= 100)
+                {
+                    idxGanador = n;
+                    llegaron++;
+                }
+                n++;
+            }
+
+            if (llegaron == 1)
+                IdxGanador = idxGanador;
         }
     }
 }

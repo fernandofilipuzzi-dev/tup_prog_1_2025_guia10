@@ -4,7 +4,6 @@ namespace Ejercicio5
 {
     internal class Program
     {
-
         static Servicio servicio = new Servicio();
 
         #region metodos de impresión de pantallas
@@ -21,7 +20,6 @@ namespace Ejercicio5
             int op = Convert.ToInt32(Console.ReadLine());
             return op;
         }
-
         static void MostrarPantallaRegistrarTransaccion()
         {
             Console.Clear();
@@ -70,7 +68,6 @@ namespace Ejercicio5
             Console.WriteLine("\n\n\nPresione una tecla para continuar");
             Console.ReadKey();
         }
-
         static void MostrarPantallaResumenRecaudaciones()
         {
             Console.Clear();

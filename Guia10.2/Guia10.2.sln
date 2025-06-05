@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3_Encuesta_Transpo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio5_Rubros", "Ejercicio5\Ejercicio5_Rubros.csproj", "{0B4FB441-6D9F-4FAC-BD48-8DE891B7633A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio6_Escaleras_serpientes", "Ejercicio7\Ejercicio6_Escaleras_serpientes.csproj", "{203AFED7-550C-4901-A39B-DD68407C3580}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio6_Escaleras_serpientes", "Ejercicio6\Ejercicio6_Escaleras_serpientes.csproj", "{203AFED7-550C-4901-A39B-DD68407C3580}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio4_Control_Acceso", "Ejercicio4\Ejercicio4_Control_Acceso.csproj", "{011E1CEE-6942-40C1-AD95-650DCB90592A}"
 EndProject
