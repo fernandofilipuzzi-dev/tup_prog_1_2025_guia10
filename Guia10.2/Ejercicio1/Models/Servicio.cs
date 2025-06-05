@@ -37,7 +37,7 @@ namespace Ejercicio1.Models
             int maximo=0;
             for (int n = 0; n < Contador; n++)
             {
-                if (Contador == 0 || Lista[n] > maximo)
+                if (n == 0 || Lista[n] > maximo)
                 {
                     maximo = Lista[n];
                 }
@@ -50,7 +50,7 @@ namespace Ejercicio1.Models
             int minimo = 0;
             for (int n = 0; n < Contador; n++)
             {
-                if (Contador == 0 || Lista[n] < minimo)
+                if (n == 0 || Lista[n] < minimo)
                 {
                     minimo = Lista[n];
                 }
