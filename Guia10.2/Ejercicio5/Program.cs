@@ -1,6 +1,6 @@
-﻿using Ejercicio5.Models;
+﻿using Ejercicio4.Models;
 
-namespace Ejercicio5
+namespace Ejercicio4
 {
     internal class Program
     {

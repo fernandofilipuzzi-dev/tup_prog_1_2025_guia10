@@ -1,5 +1,5 @@
 ﻿
-namespace Ejercicio6.Models
+namespace Ejercicio5.Models
 {
     internal class Juego
     {

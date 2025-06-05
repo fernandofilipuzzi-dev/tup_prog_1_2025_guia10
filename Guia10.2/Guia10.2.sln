@@ -9,11 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio2_Indice_compartid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio3_Encuesta_Transporte", "Ejercicio3\Ejercicio3_Encuesta_Transporte.csproj", "{12FF6B91-99E4-4382-B743-5540241943EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio5_Rubros", "Ejercicio5\Ejercicio5_Rubros.csproj", "{0B4FB441-6D9F-4FAC-BD48-8DE891B7633A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio4_Rubros", "Ejercicio5\Ejercicio4_Rubros.csproj", "{0B4FB441-6D9F-4FAC-BD48-8DE891B7633A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio6_Escaleras_serpientes", "Ejercicio6\Ejercicio6_Escaleras_serpientes.csproj", "{203AFED7-550C-4901-A39B-DD68407C3580}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio4_Control_Acceso", "Ejercicio4\Ejercicio4_Control_Acceso.csproj", "{011E1CEE-6942-40C1-AD95-650DCB90592A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio5_Escaleras_serpientes", "Ejercicio6\Ejercicio5_Escaleras_serpientes.csproj", "{203AFED7-550C-4901-A39B-DD68407C3580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{203AFED7-550C-4901-A39B-DD68407C3580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{203AFED7-550C-4901-A39B-DD68407C3580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{203AFED7-550C-4901-A39B-DD68407C3580}.Release|Any CPU.Build.0 = Release|Any CPU
-		{011E1CEE-6942-40C1-AD95-650DCB90592A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{011E1CEE-6942-40C1-AD95-650DCB90592A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{011E1CEE-6942-40C1-AD95-650DCB90592A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{011E1CEE-6942-40C1-AD95-650DCB90592A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
