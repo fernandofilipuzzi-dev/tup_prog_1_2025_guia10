@@ -59,7 +59,7 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">144</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">152</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">325</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">328</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">137</XPD:ATTR>
 <XPD:REF name="Model">e5QTdowfh0S1OdH2dlYQ7wAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="wZUlw5jaoUyjFpun2udRigAA">
@@ -159,7 +159,7 @@
 <XPD:REF name="Owner">e5QTdowfh0S1OdH2dlYQ7wAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[4]" type="UMLOperation" guid="dZqcHSdBx0u8OW2HOixF2AAA">
-<XPD:ATTR name="Name" type="string">MostrarPantallaResumenRecaudaciones</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">MostrarPantallaMostrarRecaudacionTotal</XPD:ATTR>
 <XPD:ATTR name="StereotypeName" type="string">static</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:REF name="Owner">e5QTdowfh0S1OdH2dlYQ7wAA</XPD:REF>
