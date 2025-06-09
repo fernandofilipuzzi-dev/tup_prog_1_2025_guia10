@@ -17,7 +17,8 @@ namespace Ejercicio4
 2- Mostrar Número de transacción registrado con el mayor monto total
 3- Mostrar Porcentaje de cantidad por rubro
 4- Mostrar recaudación total
-(otro)- Salir.");
+(otro)- Salir.
+");
 
             int op = Convert.ToInt32(Console.ReadLine());
             return op;
@@ -47,27 +48,35 @@ namespace Ejercicio4
         static void MostrarPantallaTransaccionMayorMonto()
         {
             Console.Clear();
-            Console.WriteLine("Transacción con mayor monto en ventas\n\n");
+            Console.WriteLine($@"Transacción con mayor monto en ventas
 
-            Console.WriteLine($"Número de transacción: {servicio.NumeroTransaccionMayor}\n");
-            Console.WriteLine($"Monto Total: ${servicio.MontoTransaccionMayor:f2}\n\n\n");
 
-            Console.WriteLine("\n\n\nPresione una tecla para continuar");
+Número de transacción: {servicio.NumeroTransaccionMayor}
+Monto Total: ${servicio.MontoTransaccionMayor:f2}
+
+
+
+
+Presione una tecla para continuar");
             Console.ReadKey();
         }
         static void MostrarPantallaPorcentajeDeCantidadesPorRubro()
         {
             Console.Clear();
-            Console.WriteLine("\n\t\tPorcentaje de ventas por rubo \n\n");
 
-            double[] porcentajes=servicio.CalcularPorcentajesCantidadVentasPorRubro();
-            Console.WriteLine($"Rubro 1: {porcentajes[0]:f2}%\n");
-            Console.WriteLine($"Rubro 2: {porcentajes[1]:f2}%\n");
-            Console.WriteLine($"Rubro 3: {porcentajes[2]:f2}%\n");
-            Console.WriteLine($"Rubro 4: {porcentajes[3]:f2}%\n");
-            Console.WriteLine($"Rubro 5: {porcentajes[4]:f2}%\n\n\n\n");
+            double[] porcentajes = servicio.CalcularPorcentajesCantidadVentasPorRubro();
 
-            Console.WriteLine("\n\n\nPresione una tecla para continuar");
+            Console.WriteLine($@"      Porcentaje de ventas por rubro
+
+
+Rubro 1: {porcentajes[0]:f2}%
+Rubro 2: {porcentajes[1]:f2}%
+Rubro 3: {porcentajes[2]:f2}%
+Rubro 4: {porcentajes[3]:f2}%
+Rubro 5: {porcentajes[4]:f2}%
+
+
+Presione una tecla para continuar");
             Console.ReadKey();
         }
         static void MostrarPantallaMostrarRecaudacionTotal()
